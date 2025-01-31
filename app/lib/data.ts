@@ -16,6 +16,7 @@ export async function fetchRevenue() {
 
     // console.log('Fetching revenue data...');
     // await new Promise((resolve) => setTimeout(resolve, 3000));
+    console.log("Using Database URL:", process.env.POSTGRES_URL);
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
